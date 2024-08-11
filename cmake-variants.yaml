@@ -1,0 +1,23 @@
+buildType:
+  default: Develop
+  choices:
+    Develop:
+      short: Develop
+      long: Emit debug information but also optimize
+      buildType: Develop
+    Debug:
+      short: Debug
+      long: Emit debug information and don't optimize
+      buildType: Debug
+    Release:
+      short: Release
+      long: Optimize generated code
+      buildType: Release
+board:
+  default: DISCO_F303CVT6
+  choices:
+    STM32F303xC:
+      short: DISCO_F303CVT6
+      settings:
+        MBED_TARGET: DISCO_F303CVT6
+        UPLOAD_METHOD: STM32CUBE
